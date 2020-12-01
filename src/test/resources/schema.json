@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Product",
   "description": "A product from the catalog",
   "type": "object",
@@ -15,7 +14,8 @@
     "price": {
       "type": "number",
       "minimum": 0,
-      "exclusiveMinimum": true
+      "exclusiveMinimum": true,
+      "message": "{0} needs to greater or equal to {1}"
     }
   },
   "required": ["id", "name", "price"]

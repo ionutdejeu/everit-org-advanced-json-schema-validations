@@ -14,6 +14,12 @@ public class JSONSchemaTest {
                 new JSONTokener(JSONSchemaTest.class.getResourceAsStream("/obj_invalid.json")));
 
         Schema schema = SchemaLoader.load(jsonSchema);
-        schema.validate(jsonSubject);
+        try {
+            schema.validate(jsonSubject);
+        }catch (ValidationException e){
+            Schema s= e.getViolatedSchema();
+
+            String msg= e.getMessage();
+        }
     }
 }
