@@ -1,0 +1,83 @@
+{
+  "title": "example schema",
+  "type": "object",
+  "additionalProperties": false,
+  "custom_message": "test_Custom_message",
+  "properties": {
+    "nested_obj_property": {
+      "type": "object",
+      "title": "nested_obj_property",
+      "patternProperties": {
+        "^.+$": {
+          "type": "object",
+          "properties": {
+            "nested_obj_lvl2": {
+              "type": "object",
+              "title": "dwadaw",
+              "patternProperties": {
+                "^.+$": {
+                  "$ref": "#/definitions/nested_property_lvl2_definition"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "nested_property_lvl2_definition": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/definition-nested-obj-lvl2-b"
+        }
+
+      ]
+    },
+    "definition-nested-obj-lvl2-a": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prop_a",
+        "prop_b"
+      ],
+      "properties": {
+        "prop_a": {
+          "type": "string",
+          "title": "prop_a"
+        },
+        "prob_b": {
+          "type": "string",
+          "title": "prop_a"
+        },
+        "prop_c": {
+          "type": "string",
+          "title": "prop_c"
+        }
+      }
+    },
+    "definition-nested-obj-lvl2-b": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prop_b",
+        "prop_c"
+      ],
+      "properties": {
+        "prop_a": {
+          "type": "string",
+          "title": "prop_a"
+        },
+        "prob_b": {
+          "type": "string",
+          "title": "prop_a"
+        },
+        "prop_c": {
+          "type": "string",
+          "title": "prop_c"
+        }
+      }
+    },
+
+}
+}

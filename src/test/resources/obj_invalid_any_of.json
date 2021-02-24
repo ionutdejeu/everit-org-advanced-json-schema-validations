@@ -1,0 +1,9 @@
+{
+  "nested_obj_property": {
+    "test": {
+      "nested_obj_lvl2": {
+        "adaw": "12"
+      }
+    }
+  }
+}

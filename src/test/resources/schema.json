@@ -5,11 +5,13 @@
   "properties": {
     "id": {
       "description": "The unique identifier for a product",
-      "type": "integer"
+      "type": "integer",
+      "message": "{0} needs to greater or equal to {1}"
     },
     "name": {
       "description": "Name of the product",
-      "type": "string"
+      "type": "string",
+      "message": "{0} needs to greater or equal to {1}"
     },
     "price": {
       "type": "number",

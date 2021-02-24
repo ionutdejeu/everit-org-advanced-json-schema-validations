@@ -1,0 +1,7 @@
+{
+  "type": "object",
+  "patternProperties": {
+    "^[0-8a-z]*": { "type": "string" }
+  },
+  "additionalProperties": false
+}
