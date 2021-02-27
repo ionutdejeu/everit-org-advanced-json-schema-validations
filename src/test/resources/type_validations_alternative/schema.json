@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "property_a": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
